@@ -17,10 +17,6 @@ class Cards {
 }
 }
 
-// Définir la variable avant de l'utiliser
-$image1 = "images/number_one.png";
-
-// Utiliser correctement la variable dans l'echo
 echo '<img src="' . $image1 . '" alt="Description de l\'image">';
 
 
@@ -44,10 +40,10 @@ $image12 = "images/number_twelve.png";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    
+    <p>TEst</p>
 </body>
 </html>
