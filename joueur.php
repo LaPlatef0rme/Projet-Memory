@@ -1,30 +1,33 @@
 <?php
+session_start();
+require_once("cardss.php");
+require_once("player.php");
 
 
 
 class joueur {
-    private $name;
-    private $scores;
+    protected $pseudo;
+    protected $meilleurScore;
 
     public function __construct($pseudo) {
-        $this->name = $pseudo;
-        $this->scores = [];
+        $this->pseudo = $pseudo;
+        $this->meilleurScore = [];
     }
 
     public function getPseudo() {
         return $this->pseudo;
     }
 
-    public function addScore($score) {
-        $this->scores[] = $score;
+    public function addMeilleurScore($score) {
+        $this->meilleurScore[] = $score;
     }
 
-    public function getScores() {
-        return $this->scores;
+    public function getMeilleurScores() {
+        return $this->meilleurScore;
     }
 
-    public function getBestScore() {
-        return !empty($this->scores) ? min($this->scores) : null;
+    public function getBestMeilleurScore() {
+        return !empty($this->scores) ? min($this->meilleurScore) : null;
     }
 }
 ?>
