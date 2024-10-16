@@ -1,21 +1,26 @@
 <?php
-
-class Card{
-
+class Card {
     protected $value;
     protected $image;
-    protected $isRevealed;
+    public $isRevealed;
 
-    public function __construct($value, $image){
+    public function __construct($value, $image) {
         $this->value = $value;
         $this->image = $image;
         $this->isRevealed = false;
     }
-    public function reveal(){
+
+    public function reveal() {
         $this->isRevealed = true;
     }
-    public function hide(){
+
+    public function hide() {
         $this->isRevealed = false;
     }
+
+    public function getImage() { // Méthode pour accéder à l'image
+        return $this->image;
+    }
 }
+
 ?>
