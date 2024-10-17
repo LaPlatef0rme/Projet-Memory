@@ -1,9 +1,8 @@
 <?php
 
-
-
 class joueur {
     private $name;
+    private $pseudo;
     private $scores;
 
     public function __construct($pseudo) {
